@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -10,4 +9,3 @@ Currently, two official plugins are available:
 =======
 # TastyTrails-FoodDelivery-ReactPHP
 TastyTrails is a modern food delivery web application built with React.js and PHP. It Designed to provide a seamless and delightful experience, TastyTrails allows users to browse, order, and enjoy their favorite meals from local restaurants with just a few clicks.
->>>>>>> 7d125852c4a57f31b48f9c55e62ce9d512e73dbb
