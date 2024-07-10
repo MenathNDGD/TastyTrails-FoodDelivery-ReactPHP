@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer" id='footer'>
             <div className="footer-content">
                 <div className="footer-content-left">
-                    <img src={assets.logo} alt=""/>
-                    <p>Hello</p>
+                    <img src={assets.logo} alt="" className="footer-logo"/>
+                    <p>dshfgdshf dshgbsdhgdsg sdhjbgdsghd ghdsgbsdhg sdgsghsdg sdbg sdhgbsdhgsd gsghsbgsdg sdghsdbgsd gsdhgsg sdhgbsdgs dgsdhg sg sgshg sdhgbsdg sdgsdbgsdgbsdjkgdsbg dsgdsb</p>
                     <div className="footer-social-icons">
                         <img src={assets.facebook_icon} alt="" />
                         <img src={assets.twitter_icon} alt="" />
