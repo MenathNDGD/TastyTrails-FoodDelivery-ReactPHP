@@ -10,8 +10,6 @@
     margin-top: 100px;
     width: 100vw;
     margin-left: -13%;
-   
-    
 }
 .footer-content{
     width: 100%;
@@ -35,6 +33,10 @@
 }
 .footer-content-right h2, .footer-content-center h2{
     color: white;
+}
+.footer-content-center ul li:hover {
+    color: tomato;
+    transform: scaleX(1.1);
 }
 .footer-social-icons img{
     width: 40px;
