@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/footer/Footer';
+
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import LoginPopup from './components/LoginPopup/LoginPopup'; // Ensure the correct import
 import GoToTopButton from './components/GoToTopButton/GoToTopButton';
+import Footer from './components/footer/footer';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
