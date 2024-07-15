@@ -15,7 +15,7 @@
     max-width: 50%;
     bottom: 10%;
     left: 6vw;
-    animation: fadeIn 3s;
+    animation: FadeIn 3s;
 }
 .header-contents h2{
     font-weight: 500;
@@ -34,6 +34,10 @@
     background-color: white;
     font-size: max(1vw,13px);
     border-radius: 50px ;
+    cursor: pointer;
+}
+.header-contents button:hover{
+    transform: scale(1.1);
 }
 
 /* Udani */
