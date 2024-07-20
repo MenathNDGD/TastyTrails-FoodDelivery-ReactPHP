@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
-
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
-import LoginPopup from './components/LoginPopup/LoginPopup'; // Ensure the correct import
+import LoginPopup from './components/LoginPopup/LoginPopup';
 import GoToTopButton from './components/GoToTopButton/GoToTopButton';
 import Footer from './components/footer/footer';
 
@@ -14,7 +13,7 @@ const App = () => {
 
   return (
     <div>
-      {showLogin && <LoginPopup setShowLogin={setShowLogin} />} {/* Correct capitalization */}
+      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
       <div className='app'>
         <Navbar setShowLogin={setShowLogin} />
         
