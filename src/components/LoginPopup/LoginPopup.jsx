@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginPopup.css';
-import { assets } from '../../assets/assets';
+import { assets } from '../../assets/assets'
 
 const LoginPopup = ({ setShowLogin }) => {
   const [currState, setCurrState] = useState("Sign Up");
@@ -20,7 +20,7 @@ const LoginPopup = ({ setShowLogin }) => {
     };
 
     try {
-      const response = await fetch(`http://localhost/Tasty_Trails/PHP/signup.php`, {
+      const response = await fetch(`http://localhost/Tasty_Trails/${currState === "Sign Up" ? 'signup.php' : 'login.php'}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
