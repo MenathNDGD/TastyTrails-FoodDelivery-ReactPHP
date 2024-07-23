@@ -31,7 +31,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     echo json_encode(["error" => "Invalid request method"]);
-    header('Location:C:\Users\Amaya\Documents\GitHub\Tasty_Trails\TastyTrails-FoodDelivery-ReactPHP\src\componentsLoginPopup.jsx');
-    exit();
 }
 ?>

@@ -40,9 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Create user
     createUser($conn, $name, $email, $username, $pwd);
     echo json_encode(["message" => "User created successfully"]);
-    header('Location:../login.php');
-    exit();
-    
 } else {
     echo json_encode(["error" => "Invalid request method"]);
 }

@@ -1,50 +1,25 @@
 <?php
 function emptyInputSignup($name, $email, $username, $pwd) {
-    $result;
-    if empty($name) || empty($email) || empty($username) || empty($pwd){
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
+    return empty($name) || empty($email) || empty($username) || empty($pwd);
 }
 
 function invalidUid($username) {
-    $result;
-    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)){
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
+    return !preg_match("/^[a-zA-Z0-9]*$/", $username);
 }
 
 function invalidEmail($email) {
-    $result;
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
+    return !filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
 function pwdMatch($pwd, $pwdMatch) {
-    $result;
-    if ($pwd !== $pwdMatch) {
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
+    return $pwd !== $pwdMatch;
 }
 
 function uidExists($conn, $username, $email) {
-    $sql = "SELECT * FROM users WHERE usersEmail = ?";
+    $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:../signup.php?error=stmtfailed");
-        exit();
+        return true;
     }
     mysqli_stmt_bind_param($stmt, "ss", $username, $email);
     mysqli_stmt_execute($stmt);
@@ -58,15 +33,13 @@ function createUser($conn, $name, $email, $username, $pwd) {
     $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:C:\Users\Amaya\Documents\GitHub\Tasty_Trails\TastyTrails-FoodDelivery-ReactPHP\src\componentsLoginPopup.jsx?error=stmtfailed");
-        exit();
+        return false;
     }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
     mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-        header("Location:C:\Users\Amaya\Documents\GitHub\Tasty_Trails\TastyTrails-FoodDelivery-ReactPHP\src\componentsLoginPopup.jsx?error=stmtfailed");
-        exit();
+    return true;
 }
 
 function emptyInputLogin($email, $pwd) {

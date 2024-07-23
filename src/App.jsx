@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
-import LoginPopup from './components/LoginPopup/LoginPopup';
+import LoginPopup from './components/LoginPopup/LoginPopup'; 
 import GoToTopButton from './components/GoToTopButton/GoToTopButton';
 import Footer from './components/footer/footer';
 
